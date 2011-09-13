@@ -13,7 +13,7 @@ import java.text._
 import java.util.Date
 
 
-trait logger {
+trait slf4jLogger {
 
   protected val timeStampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ")
   private [this] val log = LoggerFactory.getLogger(getClass)

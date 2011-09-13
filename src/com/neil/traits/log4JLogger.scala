@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 
-trait MyLoggerHelper {
+trait log4JLogger {
 
     BasicConfigurator.configure()
     val loggerName = this.getClass.getName
