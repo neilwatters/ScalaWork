@@ -11,7 +11,7 @@ package com.neil.inProgress
  import org.junit.Test
  import com.neil.traits._
 
-object HelloWorld extends  MyLoggerHelper{
+object HelloWorld extends  log4JLogger{
 
   def main(args: Array[String]) {
     debug("******* Neil")
@@ -20,7 +20,7 @@ object HelloWorld extends  MyLoggerHelper{
     print("\n")
     var myPerson:Person  = new Person("Joe Watters")
     print(myPerson.firstName +"\n")
-    //logger.debug("Inside Main Method")
+    //slf4jLogger.debug("Inside Main Method")
     //info("Neil Info")
     //warn("Neil Warning")
     //error("Neil Error")
