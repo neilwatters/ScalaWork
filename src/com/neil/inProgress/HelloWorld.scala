@@ -7,11 +7,10 @@ package com.neil.inProgress
  * Time: 21:46
  * To change this template use File | Settings | File Templates.
  */
- //import com.neil.inProgress.Person
- import org.junit.Test
+
  import com.neil.traits._
 
-object HelloWorld extends  log4JLogger{
+object HelloWorld extends  log4JLogger {
 
   def main(args: Array[String]) {
     debug("******* Neil")
@@ -20,11 +19,8 @@ object HelloWorld extends  log4JLogger{
     print("\n")
     var myPerson:Person  = new Person("Joe Watters")
     print(myPerson.firstName +"\n")
-    //slf4jLogger.debug("Inside Main Method")
-    //info("Neil Info")
-    //warn("Neil Warning")
-    //error("Neil Error")
-    debug("Neil in debbuger")
+    debug("Neil in debbuger Lovely Jubbly")
+    warn("Neil this is a warning lovely jubbly")
   }
   def printName() = {
       var name:String = "Joe"
