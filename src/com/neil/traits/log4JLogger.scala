@@ -10,23 +10,17 @@ package com.neil.traits
 
 import org.apache.log4j._
 import org.apache.log4j.BasicConfigurator
-import java.text.SimpleDateFormat
-import java.util.Date
-
 
 trait log4JLogger {
 
     BasicConfigurator.configure()
-    val loggerName = this.getClass.getName
-    lazy val logger = Logger.getLogger(loggerName)
+    private [this] val loggerName = this.getClass.getName
+    private [this] lazy val logger = Logger.getLogger(loggerName)
 
-    protected val timeStampFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ")
-    def timeStamp = timeStampFormat.format(new Date)
-
-      def trace(msg : String) : Unit =  logger.trace("[ "+timeStamp+"] "+msg)
-      def debug(msg : String) : Unit = logger.debug("[ "+timeStamp+"] "+msg)
-      def info(msg : String) : Unit = logger.info("[ "+timeStamp+"] "+msg)
-      def warn(msg : String) : Unit = logger.warn("[ "+timeStamp+"] "+msg)
-      def error(msg : String) : Unit = logger.error("[ "+timeStamp+"] "+msg)
+      def trace(msg : String) : Unit = if(logger.isTraceEnabled) logger.trace(msg)
+      def debug(msg : String) : Unit = if(logger.isDebugEnabled) logger.debug(msg)
+      def info(msg : String) : Unit =  if(logger.isInfoEnabled)  logger.info(msg)
+      def warn(msg : String) : Unit =  logger.warn(msg)
+      def error(msg : String) : Unit = logger.error(msg)
 
 }
