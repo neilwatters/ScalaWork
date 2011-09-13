@@ -21,9 +21,9 @@ object HelloWorld extends  MyLoggerHelper{
     var myPerson:Person  = new Person("Joe Watters")
     print(myPerson.firstName +"\n")
     //logger.debug("Inside Main Method")
-    info("Neil Info")
-    warn("Neil Warning")
-    error("Neil Error")
+    //info("Neil Info")
+    //warn("Neil Warning")
+    //error("Neil Error")
     debug("Neil in debbuger")
   }
   def printName() = {
