@@ -19,12 +19,12 @@ object HelloWorld extends  log4JLogger {
     print("\n")
     var myPerson:Person  = new Person("Joe Watters")
     print(myPerson.firstName +"\n")
-    debug("Neil in debbuger Lovely Jubbly")
     warn("Neil this is a warning lovely jubbly")
+    debug("Neil in debbuger Lovely Jubbly")
   }
   def printName() = {
-      var name:String = "Joe"
-      print("""Hello World and """ + name + " Help\n")
+    var name:String = "Joe"
+    print("""Hello World and """ + name + " Help\n")
 
   }
 
