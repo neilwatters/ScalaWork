@@ -19,6 +19,7 @@ class Person (name :   String){
   protected def guessAge() = {
     import Math._
     round(random * 20)
+    val ttest = 1.0
   }
 
 }
